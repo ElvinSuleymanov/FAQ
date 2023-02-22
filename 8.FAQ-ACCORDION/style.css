@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(hsl(273deg, 75%, 66%), hsl(240deg, 73%, 65%));
+  font-family: "Kumbh Sans";
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150vh;
+}
+
+section {
+  background-color: #fff;
+  width: 72%;
+  height: 500px;
+  position: relative;
+  border-radius: 25px;
+  display: flex;
+}
+section .section_left {
+  background-image: url(images/bg-pattern-desktop.png);
+  background-size: cover;
+  flex: 50%;
+}
+section .section_left .box {
+  position: absolute;
+  left: -110px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+section .section_right {
+  flex: 50%;
+  font-size: 30px;
+  padding: 6%;
+}
+section .section_right .section_right_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+section .section_right .section_right_container .row {
+  display: flex;
+  flex-direction: column;
+  transition: 0.3s all ease-in-out;
+  transition: 0.3s all ease-in-out;
+  cursor: pointer;
+}
+section .section_right .section_right_container .row::after {
+  content: " ";
+  display: block;
+  background-color: gray;
+  height: 1px;
+  margin: 10px 0px 10px;
+}
+section .section_right .section_right_container .row .questions {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  font-size: 21px;
+  justify-content: space-between;
+  transition: 0.3s all ease-in-out;
+  position: relative;
+}
+section .section_right .section_right_container .row .questions .arrow {
+  transition: 0.3s all ease-in-out;
+  cursor: pointer;
+}
+section .section_right .section_right_container .row .answer {
+  transition: 0.3s all ease-in-out;
+  height: 0;
+  overflow: hidden;
+}
+section .section_right .section_right_container .row .answer .main_answer {
+  font-size: 16px;
+  color: rgb(145, 144, 144);
+}
+
+.active {
+  transition: 0.5s all !important;
+  height: 50px !important;
+  overflow: visible !important;
+}
+
+.opened {
+  font-weight: 700;
+  transition: 0.5s all;
+}
+
+.rotation {
+  rotate: 180deg;
+}
+
+@media (max-width: 1050px) {
+  section {
+    flex-direction: column;
+    height: -moz-fit-content;
+    height: fit-content;
+    align-items: center;
+  }
+}
+@media (max-width: 720px) {
+  img:nth-child(2) {
+    width: 70%;
+  }
+}/*# sourceMappingURL=style.css.map */
